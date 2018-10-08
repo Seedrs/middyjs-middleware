@@ -7,13 +7,13 @@ Middlewares for use with middyjs 🛵 [middyjs](https://github.com/middyjs/middy
 #### Install with `npm` or `yarn` (preferred)
 
 ```bash
-npm i @seedrs/seedrs-ui-<package_name> --save
+npm i @seedrs/middyjs-middlewares --save
 ```
 
 ##### OR
 
 ```bash
-yarn add @seedrs/seedrs-ui-<package_name>
+yarn add @seedrs/middyjs-middlewares
 ```
 
 ## Contribute
