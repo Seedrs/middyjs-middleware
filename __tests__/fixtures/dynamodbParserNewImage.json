@@ -1,0 +1,51 @@
+{
+  "Records": [
+    {
+      "eventID": "f6658630-cec5-4760-98fe-9c7a8bc51907",
+      "eventName": "REMOVE",
+      "eventVersion": "1.1",
+      "eventSource": "aws:dynamodb",
+      "awsRegion": "ddblocal",
+      "dynamodb": {
+        "ApproximateCreationDateTime": "2018-08-31T13:11:00.000Z",
+        "Keys": {
+          "parent_resource": {
+            "S": "business::1::campaign::1"
+          },
+          "file_type_tag_name_bucket": {
+            "S": "document::legal_document::something.txt::private"
+          }
+        },
+        "NewImage": {
+          "parent_resource": {
+            "S": "business::1::campaign::1"
+          },
+          "file_tag": {
+            "S": "legal_document"
+          },
+          "bucket": {
+            "S": "seedrs-uploadinator-development-public"
+          },
+          "bucket_type": {
+            "S": "private"
+          },
+          "file_type_tag_name_bucket": {
+            "S": "document::legal_document::something.txt::private"
+          },
+          "file_key": {
+            "S": "business/1/campaign/1/document/legal_document/something.txt"
+          },
+          "file_name": {
+            "S": "something.txt"
+          },
+          "file_type": {
+            "S": "document"
+          }
+        },
+        "SequenceNumber": "000000000000000000002",
+        "SizeBytes": 382,
+        "StreamViewType": "OLD_IMAGE"
+      }
+    }
+  ]
+}
