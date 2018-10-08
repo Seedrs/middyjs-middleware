@@ -1,29 +1,21 @@
 # middyjs-middlewares
 
-## Pre-requisites
+Middlewares for use with middyjs 🛵 [middyjs](https://github.com/middyjs/middy)
 
-* Install docker [download here](https://www.docker.com/docker-mac).
+## Setup
 
-## Running the project
-
-* Clone the repository
-* Inside the root folder of the project run `docker-compose up`.
-
-## Testing and linting the app
-* Run an instance of the docker container with:
+#### Install with `npm` or `yarn` (preferred)
 
 ```bash
-docker-compose run middyjs_middlewares bash
+npm i @seedrs/seedrs-ui-<package_name> --save
 ```
 
-* To run the tests:
+##### OR
 
 ```bash
-yarn test
+yarn add @seedrs/seedrs-ui-<package_name>
 ```
 
-* To run the linter run:
+## Contribute
 
-```
-yarn lint
-```
+To contribute to the project, please read the [guide](CONTRIBUTING.md).
