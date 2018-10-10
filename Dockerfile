@@ -9,9 +9,11 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && echo "d
 RUN apt-get update && apt-get -y install yarn
 
 COPY package.json package.json
+COPY yarn.lock yarn.lock
 
 COPY ._npmrc .npmrc
 
 RUN yarn install
 
 COPY . .
+

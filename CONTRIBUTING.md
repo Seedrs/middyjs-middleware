@@ -15,7 +15,7 @@
 * Run an instance of the docker container with:
 
 ```bash
-docker-compose run middyjs_middlewares bash
+docker-compose run middyjs_middleware bash
 ```
 
 * To run the tests:
