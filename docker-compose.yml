@@ -1,6 +1,6 @@
 version: '3'
 services:
-  middyjs_middlewares:
+  middyjs_middleware:
     build:
       context: .
       args:

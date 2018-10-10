@@ -6,7 +6,7 @@ steps:
     plugins:
       docker-compose#v2.5.1:
         config: docker-compose.yml
-        run: middyjs_middlewares
+        run: middyjs_middleware
 
   - wait
 
@@ -17,7 +17,7 @@ steps:
     plugins:
       docker-compose#v2.5.1:
         config: docker-compose.yml
-        run: middyjs_middlewares
+        run: middyjs_middleware
 
   - wait
 
@@ -27,8 +27,8 @@ steps:
       queue: npm-packages
     branches: master
     concurrency: 1
-    concurrency_group: 'middyjs-middlewares/publish'
+    concurrency_group: 'middyjs-middleware/publish'
     plugins:
       docker-compose#v2.5.1:
         config: docker-compose.yml
-        run: middyjs_middlewares
+        run: middyjs_middleware

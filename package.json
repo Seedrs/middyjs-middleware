@@ -1,6 +1,6 @@
 {
-  "name": "@seedrs/middyjs-middlewares",
-  "version": "1.0.0",
+  "name": "@seedrs/middyjs-middleware",
+  "version": "0.0.0-semantic-release",
   "main": "lib/index.js",
   "author": "tech@seedrs.com",
   "scripts": {
@@ -50,7 +50,7 @@
       "js"
     ]
   },
-  "description": "Middlewares for middyjs",
+  "description": "Middleware for middyjs",
   "dependencies": {
     "http-errors": "^1.7.1"
   }

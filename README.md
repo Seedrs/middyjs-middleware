@@ -1,19 +1,19 @@
-# middyjs-middlewares
+# middyjs-middleware
 
-Middlewares for use with middyjs 🛵 [middyjs](https://github.com/middyjs/middy)
+Middleware for use with middyjs 🛵 [middyjs](https://github.com/middyjs/middy)
 
 ## Setup
 
 #### Install with `npm` or `yarn` (preferred)
 
 ```bash
-npm i @seedrs/middyjs-middlewares --save
+npm i @seedrs/middyjs-middleware --save
 ```
 
 ##### OR
 
 ```bash
-yarn add @seedrs/middyjs-middlewares
+yarn add @seedrs/middyjs-middleware
 ```
 
 ## Contribute
