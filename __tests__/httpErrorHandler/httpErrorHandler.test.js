@@ -47,7 +47,7 @@ describe('middleware/httpErrorHandler', () => {
       throw new createError(400,'Something missing');
     })
     .use(httpErrorHandler(logger));
-  
+
     handler({}, {}, (event, response) => {
       expect(response).toEqual({
         headers: {},
