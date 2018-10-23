@@ -1,5 +1,4 @@
 import log from '../utils/log';
-import createError from 'http-errors';
 
 const isEmpty = body => Object.keys(body).length === 0;
 
@@ -13,7 +12,7 @@ const setStatusCode = (handler) => {
   }
 };
 
-const safeStringify = (handler, logger) => {
+const safeStringify = (handler) => {
   if (handler.response.body && !isEmpty(handler.response.body)) {
     return JSON.stringify(handler.response.body);
   } else {
@@ -25,7 +24,7 @@ export default logger => (
   {
     after: (handler, next) => {
       const statusCode = setStatusCode(handler);
-      const stringifiedBody = safeStringify(handler, logger);
+      const stringifiedBody = safeStringify(handler);
       log(logger, { response: { ...handler.response } }, 'info');
       handler.response = {
         statusCode,
