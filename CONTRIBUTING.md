@@ -1,6 +1,6 @@
-# middyjs-middlewares
+# middyjs-middleware
 
-* Middlewares for use with middyjs 🛵 [middyjs](https://github.com/middyjs/middy)
+* Middleware for use with middyjs 🛵 [middyjs](https://github.com/middyjs/middy)
 
 ## Pre-requisites
 
