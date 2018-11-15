@@ -4,7 +4,7 @@ import logger from 'mocks/logger';
 import { httpErrorHandler } from '../../src';
 
 describe('middleware/httpErrorHandler', () => {
-  it('should skip non httpErrors', (done) => {
+  it('should return 500 for non httpErrors', (done) => {
     const handler = middy(() => {
       throw new Error('Standard error');
     });
@@ -12,8 +12,13 @@ describe('middleware/httpErrorHandler', () => {
     handler.use(httpErrorHandler(logger));
 
     handler({}, {}, (error, response) => {
-      expect(response).toBe(undefined);
-      expect(error.message).toEqual('Standard error');
+      expect(response).toEqual({
+        headers: {},
+        statusCode: 500,
+        body: JSON.stringify({
+          message: 'Internal server error'
+        })
+      });
       done();
     });
   });
@@ -47,7 +52,7 @@ describe('middleware/httpErrorHandler', () => {
       throw new createError(400,'Something missing');
     })
     .use(httpErrorHandler(logger));
-  
+
     handler({}, {}, (event, response) => {
       expect(response).toEqual({
         headers: {},

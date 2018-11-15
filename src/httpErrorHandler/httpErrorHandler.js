@@ -3,12 +3,12 @@ import log from '../utils/log';
 export default logger => (
   {
     onError: (handler, next) => {
+      const headers = handler.response &&
+        handler.response.headers ? handler.response.headers : {};
       if (
         handler.error.constructor.super_ &&
         handler.error.constructor.super_.name === 'HttpError'
       ) {
-        const headers = handler.response &&
-          handler.response.headers ? handler.response.headers : {};
         if (handler.error.details && Array.isArray(handler.error.details)) {
           handler.response = {
             headers,
@@ -35,10 +35,17 @@ export default logger => (
           };
         }
         log(logger, { event: handler.event, error: handler.error }, 'error');
-
-        return next();
+      } else if (handler.error) {
+        handler.response = {
+          headers,
+          statusCode: 500,
+          body: JSON.stringify({
+            message: 'Internal server error'
+          })
+        };
+        log(logger, { event: handler.event, error: handler.error }, 'error');
       }
-      return next(handler.error);
+      return next();
     }
   }
 );
